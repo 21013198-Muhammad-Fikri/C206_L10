@@ -7,10 +7,7 @@ public class ResourceCentre {
 	private static final int OPTION_ADD = 2;
 	private static final int OPTION_VIEW = 1;
 	private static final int OPTION_QUIT = 5;
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'master' of https://github.com/21013198-Muhammad-Fikri/C206_L10.git
 	public static void main(String[] args) {
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
@@ -100,11 +97,6 @@ public class ResourceCentre {
 		}
 
 	}
-
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/21013198-Muhammad-Fikri/C206_L10.git
 	public static void itemTypeMenu() {
 		ResourceCentre.setHeader("ITEM TYPES");
 		System.out.println("1. Camcorder");
@@ -144,13 +136,8 @@ public class ResourceCentre {
 		String output = "";
 
 		for (int i = 0; i < camcorderList.size(); i++) {
-<<<<<<< HEAD
-
-			output += String.format("%84s\n", camcorderList.get(i).toString());
-=======
 			output += String.format("%-84s\n", camcorderList.get(i).toString());
->>>>>>> branch 'master' of https://github.com/21013198-Muhammad-Fikri/C206_L10.git
-		}
+			}
 		return output;
 	}
 	public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
@@ -165,12 +152,7 @@ public class ResourceCentre {
 		String output = "";
 		// write your code here
 		for (int i = 0; i < chromebookList.size(); i++) {
-<<<<<<< HEAD
-
-			output += String.format("%84s\n", chromebookList.get(i).toString());
-=======
 			output += String.format("%-84s\n", chromebookList.get(i).toString());
->>>>>>> branch 'master' of https://github.com/21013198-Muhammad-Fikri/C206_L10.git
 		}
 		return output;
 	}
