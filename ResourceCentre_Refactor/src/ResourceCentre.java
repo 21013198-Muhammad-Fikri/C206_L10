@@ -3,8 +3,7 @@ import java.util.ArrayList;
 
 public class ResourceCentre {
 
-	//Student 1 - Ian
-
+	// student 1 - bala
 	private static final int OPTION_RETURN = 4;
 	private static final int OPTION_LOAN = 3;
 	private static final int OPTION_ADD = 2;
