@@ -137,8 +137,6 @@ public class ResourceCentre {
 
 		for (int i = 0; i < camcorderList.size(); i++) {
 
-
-			String assetTag = camcorderList.get(i).getAssetTag();
 			output += String.format("%-84s\n",camcorderList.get(i).toString());
 		}
 
@@ -175,7 +173,7 @@ public class ResourceCentre {
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
 		int zoom = Helper.readInt("Enter optical zoom > ");
-
+//camcorder
 		Camcorder cc= new Camcorder(tag, description, zoom);
 		return cc;
 		
