@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class ResourceCentre {
 
-
 	private static final int OPTION_RETURN = 4;
 	private static final int OPTION_LOAN = 3;
 	private static final int OPTION_ADD = 2;
@@ -26,7 +25,7 @@ public class ResourceCentre {
 
 
 			ResourceCentre.menu();
-			option = Helper.readInt("Enter an option > ");
+			option = Helper.readInt("Enter an option> ");
 
 			if (option == OPTION_VIEW) {
 				// View all items
@@ -98,8 +97,6 @@ public class ResourceCentre {
 		}
 
 	}
-
-
 	public static void itemTypeMenu() {
 		ResourceCentre.setHeader("ITEM TYPES");
 		System.out.println("1. Camcorder");
@@ -140,11 +137,14 @@ public class ResourceCentre {
 
 		for (int i = 0; i < camcorderList.size(); i++) {
 
+
 			String assetTag = camcorderList.get(i).getAssetTag();
 			output += String.format("%-84s\n",camcorderList.get(i).toString());
 		}
+
 		return output;
 	}
+	
 	public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.setHeader("CAMCORDER LIST");
 		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
@@ -157,12 +157,7 @@ public class ResourceCentre {
 		String output = "";
 		// write your code here
 		for (int i = 0; i < chromebookList.size(); i++) {
-
-			String assetTag = chromebookList.get(i).getAssetTag();
-			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", assetTag,
-					chromebookList.get(i).getDescription(), 
-					ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
-					chromebookList.get(i).getDueDate(),chromebookList.get(i).getOs());
+			output += String.format("%-84s\n", chromebookList.get(i).toString());
 		}
 		return output;
 	}
@@ -325,7 +320,7 @@ public class ResourceCentre {
 		// write your code here
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
-		Boolean isReturned = doReturnChromebook(chromebookList, tag);
+		Boolean isReturned = doReturnChromebook(chromebookList, tag );
 		
 		if (isReturned == false) {
 			System.out.println("Invalid asset tag");
@@ -333,6 +328,7 @@ public class ResourceCentre {
 			System.out.println("Chromebook " + tag + " returned");
 		}
 	}
+	
 
 
 }
