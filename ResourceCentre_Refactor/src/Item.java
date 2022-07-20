@@ -13,32 +13,12 @@ public class Item {
 	}
 	public String toString() {
 		// Write your codes here
-<<<<<<< HEAD
 		String itemInfo = String.format("%-10s %-30s %-10s %-10s", assetTag,
 				description, 
 				showAvailability(isAvailable),
 				dueDate);
 		return itemInfo;
 	}
-	public String showAvailability(boolean isAvailable) {
-		String avail;
-
-		if (isAvailable == true) {
-			avail = "Yes";
-		} else {
-			avail = "No";
-		}
-		return avail;
-=======
-		String itemInfo = String.format("%-10s %-30s %-10s %-10s", assetTag, 
-				description,
-				showAvailability(isAvailable),
-				dueDate);
-		
-		return itemInfo;
->>>>>>> branch 'master' of https://github.com/21013198-Muhammad-Fikri/C206_L10.git
-	}
-	
 	public String showAvailability(boolean isAvailable) {
 		String avail;
 

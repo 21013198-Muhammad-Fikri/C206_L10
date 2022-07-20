@@ -12,15 +12,7 @@ public class Chromebook extends Item{
 	}
 	
 	public String toString(){
-<<<<<<< HEAD
-=======
 		String output = super.toString();
->>>>>>> branch 'master' of https://github.com/21013198-Muhammad-Fikri/C206_L10.git
-		// Write your codes here
-<<<<<<< HEAD
-		String output = super.toString();
-=======
->>>>>>> branch 'master' of https://github.com/21013198-Muhammad-Fikri/C206_L10.git
 		output = String.format("%-63s %-20s", output, os);
 		return output;
 		
