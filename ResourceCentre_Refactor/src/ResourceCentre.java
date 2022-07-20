@@ -141,10 +141,7 @@ public class ResourceCentre {
 		for (int i = 0; i < camcorderList.size(); i++) {
 
 			String assetTag = camcorderList.get(i).getAssetTag();
-			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", assetTag,
-					camcorderList.get(i).getDescription(), 
-					ResourceCentre.showAvailability(camcorderList.get(i).getIsAvailable()),
-					camcorderList.get(i).getDueDate(),camcorderList.get(i).getOpticalZoom());
+			output += String.format("%-84s\n",camcorderList.get(i).toString());
 		}
 		return output;
 	}
