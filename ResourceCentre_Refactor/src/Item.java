@@ -12,8 +12,8 @@ public class Item {
 		this.isAvailable = true;
 	}
 	public String toString() {
-		
 		// Write your codes here
+<<<<<<< HEAD
 		String itemInfo = String.format("%-10s %-30s %-10s %-10s", assetTag,
 				description, 
 				showAvailability(isAvailable),
@@ -29,7 +29,27 @@ public class Item {
 			avail = "No";
 		}
 		return avail;
+=======
+		String itemInfo = String.format("%-10s %-30s %-10s %-10s", assetTag, 
+				description,
+				showAvailability(isAvailable),
+				dueDate);
+		
+		return itemInfo;
+>>>>>>> branch 'master' of https://github.com/21013198-Muhammad-Fikri/C206_L10.git
 	}
+	
+	public String showAvailability(boolean isAvailable) {
+		String avail;
+
+		if (isAvailable == true) {
+			avail = "Yes";
+		} else {
+			avail = "No";
+		}
+		return avail;
+	}
+	
 	public String getAssetTag() {
 		return assetTag;
 	}
@@ -53,5 +73,6 @@ public class Item {
 	public void setIsAvailable(boolean isAvailable) {
 		this.isAvailable = isAvailable;
 	}
+	
 }
 
