@@ -1,8 +1,10 @@
+
 import java.util.ArrayList;
 
 public class ResourceCentre {
 
-	
+	//Student 1 - Ian
+
 	private static final int OPTION_RETURN = 4;
 	private static final int OPTION_LOAN = 3;
 	private static final int OPTION_ADD = 2;
@@ -44,7 +46,7 @@ public class ResourceCentre {
 					System.out.println("Camcorder added");
 
 				} else if (itemType == OPTION_ADD) {
-					// Add Chromebook.
+					// Add Chromebook
 					Chromebook cb = inputChromebook();
 					ResourceCentre.addChromebook(chromebookList, cb);
 					System.out.println("Chromebook added");
@@ -325,3 +327,4 @@ public class ResourceCentre {
 
 
 }
+
