@@ -31,7 +31,7 @@ public class ResourceCentreTest {
 		chromebookList= new ArrayList<Chromebook>();
 	}
 
-	
+	//demo
 	@Test
 	public void testAddCamcorder() {
 		// Item list is not null, so that can add a new item - boundary
@@ -110,6 +110,7 @@ public class ResourceCentreTest {
 		testOutput = String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0011", "My Google Chromebook 1st","Yes", "", "Mac OS");
 		testOutput += String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0012", "SAMSUNG Chromebook 4+", "Yes", "","Win 10");	
 		assertEquals("Test that ViewAllChromebooklist", testOutput, allChrombook);
+		
 	}
 
 	@Test
