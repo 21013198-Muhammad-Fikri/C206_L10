@@ -137,10 +137,13 @@ public class ResourceCentre {
 	//================================= Option 1 View (CRUD - Read) =================================
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		String output = "";
-
-		for (int i = 0; i < camcorderList.size(); i++) {
-			output += String.format("%-84s\n", camcorderList.get(i).toString());
+		
+		for (Camcorder i: camcorderList) {
+			output += i.toString();
 		}
+	//	for (int i = 0; i < camcorderList.size(); i++) {
+	//		output += String.format("%-84s\n", camcorderList.get(i).toString());
+	//	}
 		return output;
 	}
 	public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
@@ -153,10 +156,13 @@ public class ResourceCentre {
 
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
-		// write your code here
-		for (int i = 0; i < chromebookList.size(); i++) {
-			output += String.format("%-84s\n", chromebookList.get(i).toString());
+		for (Chromebook i: chromebookList) {
+			output += i.toString();
 		}
+		// write your code here
+	//	for (int i = 0; i < chromebookList.size(); i++) {
+	//		output += String.format("%-84s\n", chromebookList.get(i).toString());
+	//	}
 		return output;
 	}
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
@@ -326,7 +332,7 @@ public class ResourceCentre {
 			System.out.println("Chromebook " + tag + " returned");
 		}
 	}
-	
+
 
 
 }
