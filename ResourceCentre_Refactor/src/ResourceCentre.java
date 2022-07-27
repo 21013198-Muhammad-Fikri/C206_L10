@@ -1,14 +1,14 @@
+
 import java.util.ArrayList;
 
 public class ResourceCentre {
 
-
+	// student 1 - bala
 	private static final int OPTION_RETURN = 4;
 	private static final int OPTION_LOAN = 3;
 	private static final int OPTION_ADD = 2;
 	private static final int OPTION_VIEW = 1;
 	private static final int OPTION_QUIT = 5;
-
 	public static void main(String[] args) {
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
@@ -21,9 +21,7 @@ public class ResourceCentre {
 
 		int option = 0;
 
-
 		while (option != OPTION_QUIT) {
-
 
 			ResourceCentre.menu();
 			option = Helper.readInt("Enter an option > ");
@@ -40,13 +38,13 @@ public class ResourceCentre {
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
-				if (itemType == 1) {
+				if (itemType == OPTION_VIEW) {
 					// Add a camcorder
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
 					System.out.println("Camcorder added");
 
-				} else if (itemType == 2) {
+				} else if (itemType == OPTION_ADD) {
 					// Add Chromebook
 					Chromebook cb = inputChromebook();
 					ResourceCentre.addChromebook(chromebookList, cb);
@@ -63,10 +61,10 @@ public class ResourceCentre {
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
-				if (itemType == 1) {
+				if (itemType == OPTION_VIEW) {
 					// Loan camcorder
 					ResourceCentre.loanCamcorder(camcorderList);
-				} else if (itemType == 2) {
+				} else if (itemType == OPTION_ADD) {
 					// Loan Chromebook
 					ResourceCentre.loanChromebook(chromebookList);
 				} else {
@@ -79,10 +77,10 @@ public class ResourceCentre {
 				itemTypeMenu();
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
-				if (itemType == 1) {
+				if (itemType == OPTION_VIEW) {
 					// Return camcorder
 					ResourceCentre.returnCamcorder(camcorderList);
-				} else if (itemType == 2) {
+				} else if (itemType == OPTION_ADD) {
 					// Return Chromebook
 					ResourceCentre.returnChromebook(chromebookList);
 				} else {
@@ -98,7 +96,6 @@ public class ResourceCentre {
 		}
 
 	}
-
 
 	public static void itemTypeMenu() {
 		ResourceCentre.setHeader("ITEM TYPES");
@@ -140,6 +137,11 @@ public class ResourceCentre {
 		
 		for (Camcorder i: camcorderList) {
 			output += i.toString();
+
+	//	for (int i = 0; i < camcorderList.size(); i++) {
+
+	//		output += String.format("%-84s \n", camcorderList.get(i).toString());
+//>>>>>>> branch 'master' of https://github.com/21013198-Muhammad-Fikri/C206_L10.git
 		}
 	//	for (int i = 0; i < camcorderList.size(); i++) {
 	//		output += String.format("%-84s\n", camcorderList.get(i).toString());
@@ -156,8 +158,15 @@ public class ResourceCentre {
 
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
+
 		for (Chromebook i: chromebookList) {
 			output += i.toString();
+
+		// write your code here
+		//for (int i = 0; i < chromebookList.size(); i++) {
+
+		//	output += String.format("%-84s \n", chromebookList.get(i).toString());
+
 		}
 		// write your code here
 	//	for (int i = 0; i < chromebookList.size(); i++) {
@@ -279,8 +288,7 @@ public class ResourceCentre {
 		boolean isReturned = false;
 
 		for (int i = 0; i < camcorderList.size(); i++) {
-			String assetTag = camcorderList.get(i).getAssetTag();
-			if (tag.equalsIgnoreCase(assetTag)
+			if (tag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())
 					&& camcorderList.get(i).getIsAvailable() == false) {
 				camcorderList.get(i).setIsAvailable(true);
 				camcorderList.get(i).setDueDate("");
@@ -308,8 +316,7 @@ public class ResourceCentre {
 		boolean isReturned = false;
 
 		for (int i = 0; i < chromebookList.size(); i++) {
-			String assetTag = chromebookList.get(i).getAssetTag();
-			if (tag.equalsIgnoreCase(assetTag)
+			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
 					&& chromebookList.get(i).getIsAvailable() == false) {
 				chromebookList.get(i).setIsAvailable(true);
 				chromebookList.get(i).setDueDate("");
@@ -333,6 +340,8 @@ public class ResourceCentre {
 		}
 	}
 
+//>>>>>>> branch 'master' of https://github.com/21013198-Muhammad-Fikri/C206_L10.git
 
 
 }
+
