@@ -1,9 +1,9 @@
 
 public class Item {
-	private String assetTag;
-	private String description;
-	private String dueDate;
-	private boolean isAvailable;
+  private String assetTag;
+  private String description;
+  private String dueDate;
+  private boolean isAvailable;
 
 	public Item(String assetTag, String description) {
 		this.assetTag = assetTag;
@@ -13,46 +13,50 @@ public class Item {
 	}
 	public String toString() {
 		// Write your codes here
-		String itemInfo = String.format("%-10s %-30s %-10s %-10s ", assetTag,
-				description, 
+		String itemInfo = String.format("%-10s %-30s %-10s %-10s ", assetTag, 
+				description,
 				showAvailability(isAvailable),
 				dueDate);
+		
 		return itemInfo;
 	}
-	public String showAvailability(boolean isAvailable) {
-		String avail;
 
-		if (isAvailable == true) {
-			avail = "Yes";
-		} else {
-			avail = "No";
-		}
-		return avail;
-	}
-	
-	public String getAssetTag() {
-		return assetTag;
-	}
+  public  String showAvailability(boolean isAvailable) {
+    String avail;
 
-	public String getDescription() {
-		return description;
-	}
+    if (isAvailable == true) {
+      avail = "Yes";
+    } else {
+      avail = "No";
+    }
+    return avail;
+  }
 
-	public String getDueDate() {
-		return dueDate;
-	}
 
-	public void setDueDate(String dueDate) {
-		this.dueDate = dueDate;
-	}
+  public String getAssetTag() {
+    return assetTag;
+  }
 
-	public boolean getIsAvailable() {
-		return isAvailable;
-	}
+  public String getDescription() {
+    return description;
+  }
 
-	public void setIsAvailable(boolean isAvailable) {
-		this.isAvailable = isAvailable;
-	}
-	
+  public String getDueDate() {
+    return dueDate;
+  }
+
+  public void setDueDate(String dueDate) {
+    this.dueDate = dueDate;
+  }
+
+  public boolean getIsAvailable() {
+    return isAvailable;
+  }
+
+  public void setIsAvailable(boolean isAvailable) {
+    this.isAvailable = isAvailable;
+  }
+
 }
+
 
